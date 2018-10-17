@@ -1,0 +1,27 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+home:
+    path: /home
+    controller: App\Controller\homeController::index
+
+add:
+    path: /home/add
+    controller: App\Controller\homeController::add
+
+addCategory:
+    path: /home/addCategory
+    controller: App\Controller\homeController::addCategory
+
+viewCategory:
+    path:      /home/category/{category}
+    controller: App\Controller\homeController::viewCategory
+
+viewExam:
+    path:      /home/exam/{id}
+    controller: App\Controller\homeController::viewExam
+
+delete:
+    path:      /home/exam/{id}
+    controller: App\Controller\homeController::delete

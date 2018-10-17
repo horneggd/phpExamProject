@@ -1,0 +1,24 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+    Category exam {{category.name}} - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+    <h2>Exam list in the category : {{category.name}}</h2>
+
+    <ul>
+        {% for exam in examlist %}
+            <li>
+                <a href="{{ path('view', {'id': exam.id}) }}">
+                    {{ exam.name }}
+                </a>
+                par {{ exam.author }},
+            </li>
+        {% else %}
+            <li>any exam available in this category</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
